@@ -1,0 +1,9 @@
+E->TA
+A->+TA|ε
+T->FB
+B->*FB|ε
+F->i|(E)
+
+S->aAcBe
+A->b|Ab
+B->d

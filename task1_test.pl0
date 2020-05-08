@@ -1,0 +1,31 @@
+const a=10,b=+1,c=-10,
+    d=3e1,e=+2e2,f=-2e-1,
+    g=0.5e-1,h=+10.1e+1;
+var m18s11,mw1,m,n,r,q;
+{const, m223,;}
+procedure gcd;
+    begin
+        if odd a
+            q:=m/n;
+        while r#0 do
+            begin
+                q:=m/n;
+                r:=m-q*n;
+                m:=n;
+                n:=r;
+            end
+     end;
+begin
+    read(m);
+    read(n);
+    {为了方便，规定m>=n}
+    if m<n then
+        begin
+            r:=m;m:=n;n:=r;
+        end;
+    begin
+        r:=1+996;
+        call gcd;
+        write(m);
+    end;
+end.

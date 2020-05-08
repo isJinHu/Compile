@@ -1,0 +1,45 @@
+E->TA
+A->+TA|ε
+T->FB
+B->*FB|ε
+F->i|(E)
+非终结符集:{E,A,T,B,F}
+终结符集:{+,*,i,(,)}
+FIRST集：
+   FIRST(E):    {i,(} 
+   FIRST(A):    {ε,+} 
+   FIRST(T):    {i,(} 
+   FIRST(B):    {ε,*} 
+   FIRST(F):    {i,(} 
+   FIRST(+):    {+}   
+   FIRST(*):    {*}   
+   FIRST(i):    {i}   
+   FIRST(():    {(}   
+   FIRST()):    {)}   
+   FIRST(ε):    {ε}   
+
+FOLLOW集：
+   FOLLOW(E):    {),#}     
+   FOLLOW(A):    {),#}     
+   FOLLOW(T):    {),#,+}   
+   FOLLOW(B):    {),#,+}   
+   FOLLOW(F):    {),#,+,*} 
+
+SELECT集：
+   SELECT(E->TA):     {i,(}   
+   SELECT(A->+TA):    {+}     
+   SELECT(A->ε):      {),#}   
+   SELECT(T->FB):     {i,(}   
+   SELECT(B->*FB):    {*}     
+   SELECT(B->ε):      {),#,+} 
+   SELECT(F->i):      {i}     
+   SELECT(F->(E)):    {(}     
+
+预测分析表
+ VT  +    *    i   (    )  # 
+ E             TA  TA        
+ A   +TA                ε  ε 
+ T             FB  FB        
+ B   ε    *FB           ε  ε 
+ F             i   (E)       
+

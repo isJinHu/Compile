@@ -1,0 +1,12 @@
+S->aAcBe
+A->b|Ab
+B->d
+Z->#S#
+优先矩阵:
+ VT  a  c  e  b  d  # 
+ a      =     <       
+ c         =     <    
+ e                  > 
+ b      >     >       
+ d         >          
+ #   <              = 

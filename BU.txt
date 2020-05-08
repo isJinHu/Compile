@@ -1,0 +1,14 @@
+S->aAcBe
+A->b|Ab
+B->d
+优先矩阵:
+ V  S  A  B  a  c  e  b  d 
+ S                         
+ A              =     =    
+ B                 =       
+ a     =              <    
+ c        =              < 
+ e                         
+ b              >     >    
+ d                 >       
+
