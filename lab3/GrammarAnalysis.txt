@@ -7,9 +7,9 @@ F->i|(E)
 终结符集:{+,*,i,(,)}
 FIRST集：
    FIRST(E):    {i,(} 
-   FIRST(A):    {ε,+} 
+   FIRST(A):    {+,ε} 
    FIRST(T):    {i,(} 
-   FIRST(B):    {ε,*} 
+   FIRST(B):    {*,ε} 
    FIRST(F):    {i,(} 
    FIRST(+):    {+}   
    FIRST(*):    {*}   
@@ -21,9 +21,9 @@ FIRST集：
 FOLLOW集：
    FOLLOW(E):    {),#}     
    FOLLOW(A):    {),#}     
-   FOLLOW(T):    {),#,+}   
-   FOLLOW(B):    {),#,+}   
-   FOLLOW(F):    {),#,+,*} 
+   FOLLOW(T):    {+,),#}   
+   FOLLOW(B):    {+,),#}   
+   FOLLOW(F):    {+,),*,#} 
 
 SELECT集：
    SELECT(E->TA):     {i,(}   
@@ -31,7 +31,7 @@ SELECT集：
    SELECT(A->ε):      {),#}   
    SELECT(T->FB):     {i,(}   
    SELECT(B->*FB):    {*}     
-   SELECT(B->ε):      {),#,+} 
+   SELECT(B->ε):      {+,),#} 
    SELECT(F->i):      {i}     
    SELECT(F->(E)):    {(}     
 
